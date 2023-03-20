@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class LevelResultDisplay : MonoBehaviour, ILevelResultDisplay
+public class LevelResultDisplay : MonoBehaviour
 {
     [SerializeField] private GameObject successPanel;
     [SerializeField] private GameObject failPanel;

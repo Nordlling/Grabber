@@ -2,7 +2,7 @@ using UnityEngine;
 public class SelectablePoint : MonoBehaviour
 {
     private HingeJoint2D[] _joints;
-    private IRopeSpawner ropeSpawner;
+    private RopeSpawner ropeSpawner;
     private SpriteRenderer circleSprite;
     private bool _free = true;
     
