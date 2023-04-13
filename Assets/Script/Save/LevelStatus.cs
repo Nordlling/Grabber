@@ -15,7 +15,7 @@ public static class LevelStatus
         if (_saveData == null)
         {
             _saveData = new SaveData();
-            _saveData = LevelSaver.TakeData();
+            _saveData = LevelSaver.LoadData();
         }
     }
 

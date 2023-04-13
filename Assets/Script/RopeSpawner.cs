@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class RopeSpawner : MonoBehaviour, IRopeSpawner
+public class RopeSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject firstConnectedBody;
-    [SerializeField] private GameObject secondConnectedBody;
     [SerializeField] private GameObject ropePrefab;
     [SerializeField] private int linkCount;
     [SerializeField] private AudioSource slowMotionEffect;
@@ -15,9 +13,8 @@ public class RopeSpawner : MonoBehaviour, IRopeSpawner
     [SerializeField] private float slowedTime = 0.01f;
     
     private const float _effectDurationBeforeTimeShift = 0.6f;
-    private HingeJoint2D _hingeJoint2D;
     private List<HingeJoint2D> _joints = new List<HingeJoint2D>();
-    private ILevelResultDisplay _levelResultDisplay;
+    private LevelResultDisplay _levelResultDisplay;
 
     private void Start()
     {
@@ -57,13 +54,6 @@ public class RopeSpawner : MonoBehaviour, IRopeSpawner
                 _joints.Clear();
             }
         }
-    }
-
-    private void CreateRope()
-    {
-        HingeJoint2D firstObjectPosition = firstConnectedBody.GetComponent<HingeJoint2D>();
-        HingeJoint2D secondObjectPosition = secondConnectedBody.GetComponent<HingeJoint2D>();
-        CreateRope(firstObjectPosition, secondObjectPosition);
     }
 
     private void CreateRope(HingeJoint2D firstBody, HingeJoint2D secondBody)

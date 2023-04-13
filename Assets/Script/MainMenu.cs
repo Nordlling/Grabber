@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     
     public void ContinueGame()
     {
-        int activeScene = LevelSaver.TakeData().SelectedLevel;
+        int activeScene = LevelSaver.LoadData().SelectedLevel;
         SceneManager.LoadScene(activeScene);
     }
 

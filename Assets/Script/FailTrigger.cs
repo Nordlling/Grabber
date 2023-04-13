@@ -5,7 +5,7 @@ using UnityEngine;
 public class FailTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject failPanel;
-    private ILevelResultDisplay _levelResultDisplay;
+    private LevelResultDisplay _levelResultDisplay;
 
     private void Start()
     {

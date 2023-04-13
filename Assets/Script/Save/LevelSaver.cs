@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 
 public static class LevelSaver
 {
-    
-    
-    
+
     public static SaveData Init()
     {
         SaveData saveData = new SaveData();
@@ -20,7 +18,6 @@ public static class LevelSaver
 
         saveData.LevelMap = _levelMap;
         saveData.SelectedLevel = 1;
-        SaveData(saveData);
         return saveData;
     }
     
@@ -40,7 +37,7 @@ public static class LevelSaver
     }
     
 
-    public static SaveData TakeData()
+    public static SaveData LoadData()
     {
         if (File.Exists(Application.persistentDataPath + "/save.dat"))
         {
